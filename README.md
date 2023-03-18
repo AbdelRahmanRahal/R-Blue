@@ -1,2 +1,2 @@
 # R Blue
- A nice vibrant blue Sublime Text 4 theme
+ A nice vibrant blue Sublime Text 4 colour scheme
