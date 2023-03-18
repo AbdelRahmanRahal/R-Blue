@@ -12,7 +12,8 @@
 		"blue_1" : "hsl(209, 85%, 57%)",
 		"blue_2" : "hsl(195, 86%, 57%)",
 		"blue_3" : "hsl(203, 67%, 56%)",
-		"blue_4": "hsl(210, 82%, 55%)",
+		"blue_4": "hsl(210, 60%, 60%)",
+		"blue_5" : "hsl(220, 100%, 82%)",
 		"cyan_1" : "hsl(187, 77%, 59%)",
 		"cyan_2" : "hsl(174, 76%, 64%)",
 		"cyan_3" : "hsl(204, 75%, 86%)",
@@ -100,6 +101,11 @@
 			"foreground": "var(blue_1)"
 		},
 		{
+			"name" : "Declaration Keywords", // For some reason, it doesn't register .declarations with the scope above, so I have to put it alone.
+			"scope": "keyword.declaration",
+			"foreground": "var(blue_1)"
+		},
+		{
 			"name" : "Operators",
 			"scope": "keyword.operator",
 			"foreground": "var(white_1)"
@@ -140,6 +146,11 @@
 			"scope": "entity.name.function",
 			"foreground": "var(cyan_1)"
 		},
+		{
+            "name": "Entity Names",
+            "scope": "entity.name - (entity.name.section | entity.name.tag | entity.name.label)",
+            "foreground": "var(blue_5)"
+        },
 		{
             "name": "Inherited Classes",
             "scope": "entity.other.inherited-class",
@@ -198,11 +209,6 @@
             "scope": "message.error",
             "foreground": "var(red_1)"
         },
-		{
-			"name" : "Definitions",
-			"scope": "keyword.declaration",
-			"foreground": "var(blue_1)"
-		},
 		// Basic HTML stuff, but this isn't built for it
 		{
 			//Tags
