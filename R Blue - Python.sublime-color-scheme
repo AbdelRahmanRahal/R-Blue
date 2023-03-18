@@ -1,0 +1,223 @@
+{
+	"variables":
+	{
+		"orange_1": "hsl(32, 93%, 66%)",
+		"orange_2": "hsl(40, 94%, 68%)",
+		"red_1" : "hsl(0, 85%, 65%)",
+		"red_2" : "hsl(8, 85%, 67%)",
+		"pink_1" : "hsl(337, 84%, 78%)",
+		"pink_2" : "hsl(287, 53%, 70%)",
+		"purple_1" : "hsl(292, 50%, 71%)",
+		"purple_2" : "hsl(277, 70%, 64%)",
+		"blue_1" : "hsl(209, 85%, 57%)",
+		"blue_2" : "hsl(195, 86%, 57%)",
+		"blue_3" : "hsl(203, 67%, 56%)",
+		"blue_4": "hsl(210, 82%, 55%)",
+		"cyan_1" : "hsl(187, 77%, 59%)",
+		"cyan_2" : "hsl(174, 76%, 64%)",
+		"cyan_3" : "hsl(204, 75%, 86%)",
+		"cyan_4" : "hsl(172, 100%, 53%)",
+
+		"black": "hsl(0, 0%, 0%)",
+		"grey": "hsl(0, 0%, 20%)",
+		"grey_1" : "hsl(213, 22%, 9%)",
+		"grey_2" : "hsl(221, 12%, 69%)",
+		"grey_3": "hsla(210, 13%, 40%, 0.7)",
+		"grey_4": "hsl(210, 13%, 45%)",
+		"grey_5": "hsl(180, 36%, 54%)",
+		"white_1": "hsl(0, 0%, 100%)",
+		"white_2": "hsl(0, 0%, 97%)",
+		"white_3": "hsl(219, 28%, 88%)",
+		"white_4" : "hsl(60, 36%, 96%)",
+	},
+	"globals":
+	{
+		"foreground": "var(white_3)",
+		"background": "var(grey_1)",
+		"accent": "var(blue_4)",
+		"caret": "var(white_4)",
+		"line_highlight": "var(grey_3)",
+		"selection": "var(grey_3)",
+		"selection_border": "var(grey_4)",
+		"inactive_selection": "var(grey_3)",
+		"misspelling": "var(red_1)",
+		"shadow": "color(var(black) alpha(0.25))",
+		"active_guide": "var(grey_5)",
+		"stack_guide": "color(var(grey_5) alpha(0.5))",
+		"highlight": "var(grey_5)",
+		"find_highlight_foreground": "var(grey)",
+		"find_highlight": "var(orange_2)",
+		"brackets_options": "underline",
+        "brackets_foreground": "var(orange_1)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "var(grey_5)",
+        "tags_options": "stippled_underline",
+        "tags_foreground": "var(pink_2)"
+	},
+	"rules":
+	[
+		{
+			"name": "Comment",
+            "scope": "comment, punctuation.definition.comment",
+            "foreground": "var(grey_2)"
+		},
+		{
+			"name" : "Strings",
+			"scope": "string",
+			"foreground": "var(pink_1)"
+		},
+		{
+			"name" : "String Punctuation",
+			"scope": "punctuation.definition.string",
+			"foreground": "var(pink_1)"
+		},
+		{
+			"name" : "Numbers",
+			"scope": "constant.numeric",
+			"foreground": "var(cyan_3)"
+		},
+		{
+            "name": "Number Suffix",
+            "scope": "storage.type.numeric",
+            "foreground": "var(pink_2)",
+            "font_style": "italic"
+        },
+		{
+			"name": "Built-in Constants",
+			"scope": "constant.language",
+			"foreground": "var(cyan_4)",
+			"font_style": "bold italic"
+		},
+		{
+			"name" : "User-defined Constants",
+			"scope": "constant.character, constant.other",
+			// "foreground": "var(blue_1)"
+			"foreground": "var(pink_2)"
+		},
+		{
+			"name" : "Keywords",
+			"scope": "keyword - (keyword.control.import | keyword.operator)",
+			"foreground": "var(blue_1)"
+		},
+		{
+			"name" : "Operators",
+			"scope": "keyword.operator",
+			"foreground": "var(white_1)"
+		},
+		{
+            "name": "Punctuation",
+            "scope": "punctuation.separator, punctuation.terminator",
+            "foreground": "var(grey_2)"
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation.section",
+            "foreground": "var(white_1)"
+        },
+        {
+            "name": "Accessor",
+            "scope": "punctuation.accessor",
+            "foreground": "var(grey_2)"
+        },
+        {
+            "name": "Annotation Punctuation",
+            "scope": "punctuation.definition.annotation",
+            "foreground": "var(blue_3)"
+        },
+		{
+			"name" : "Storage",
+			"scope": "storage",
+			"foreground": "var(cyan_4)"
+		},
+		{
+            "name": "Storage types",
+            "scope": "storage.type",
+            "foreground" : "var(pink_2)",
+            "font_style": "italic"
+        },
+		{
+			"name" : "Entity Names", //like user functions declatarations
+			"scope": "entity.name.function",
+			"foreground": "var(cyan_1)"
+		},
+		{
+            "name": "Inherited Classes",
+            "scope": "entity.other.inherited-class",
+            "foreground": "var(blue_3)",
+            "font_style": "italic"
+        },
+		{
+			"name" : "Function arguments",
+			"scope": "variable.parameter",
+			"foreground": "var(purple_1)"
+		},
+		{
+			"name" : "Imports",
+			"scope": "keyword.control.import",
+			"foreground": "var(purple_2)"
+		},
+		{
+			"name" : "Language Variables",
+			"scope": "variable.language",
+			"foreground": "var(white_1)",
+			"font_style": "italic"
+		},
+		{
+			"name" : "Function Calls",
+			"scope": "variable.function, variable.annotation", //Originally was variable.function meta.generic-name
+			"foreground": "var(cyan_1)"
+		},
+		{
+			"name": "Methods/Library Functions",
+			"scope": "support.function, support.macro",
+			"foreground": "var(blue_2)",
+			"font_style": "italic"
+		},
+		{
+            "name": "Library Constants",
+            "scope": "support.constant",
+            "foreground": "var(pink_2)",
+            "font_style": "italic"
+        },
+		{
+			"name": "Library Classes/Types",
+			"scope": "support.type, support.class",
+			"foreground": "var(cyan_2)"
+		},
+		{
+            "name": "Invalid",
+            "scope": "invalid",
+            "foreground": "var(white_2)",
+            "background": "var(red_1)"
+        },
+        {
+            "scope": "constant.numeric.line-number.match",
+            "foreground": "var(red_1)"
+        },
+        {
+            "scope": "message.error",
+            "foreground": "var(red_1)"
+        },
+		{
+			"name" : "Definitions",
+			"scope": "keyword.declaration",
+			"foreground": "var(blue_1)"
+		},
+		// Basic HTML stuff, but this isn't built for it
+		{
+			//Tags
+			"scope": "entity.name.tag",
+			"foreground": "var(blue_1)"
+		},
+		{
+			//Attributes
+			"scope": "entity.other.attribute-name",
+			"foreground": "var(cyan_1)"
+		},
+		{
+			//Tag Punctuations
+			"scope": "punctuation.definition.tag",
+			"foreground": "var(cyan_2)"
+		},
+	]
+}
